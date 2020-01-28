@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Awa\Mobileshop\Api\WishlistManagementInterface" type="Awa\Mobileshop\Model\WishlistManagement"/>
+	<preference for="Awa\Mobileshop\Api\ReviewManagementInterface" type="Awa\Mobileshop\Model\ReviewManagement"/>
+	<preference for="Awa\Mobileshop\Api\Data\ReviewInterface" type="Awa\Mobileshop\Model\Data\Review"/>
+	<preference for="Awa\Mobileshop\Api\Data\RatingVoteInterface" type="Awa\Mobileshop\Model\Data\RatingVote"/>
+	<preference for="Awa\Mobileshop\Api\Data\SaveInterface" type="Awa\Mobileshop\Model\Review\Save"/>
+</config>

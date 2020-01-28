@@ -1,0 +1,22 @@
+{
+    "name": "awa/module-mobileshop",
+    "description": "this extention use for rest api wishlist, review",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "email": "dp@axiswebart.com",
+            "name": "axiswebart"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Awa\\Mobileshop\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

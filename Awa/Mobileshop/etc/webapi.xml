@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route method="GET" url="/V1/awa-mobileshop/wishlist/:customerId">
+		<service class="Awa\Mobileshop\Api\WishlistManagementInterface" method="getWishlist"/>
+		<resources>
+			<resource ref="Awa_Mobileshop::wishlist"/>
+		</resources>
+	</route>
+	<route method="POST" url="/V1/awa-mobileshop/wishlist">
+		<service class="Awa\Mobileshop\Api\WishlistManagementInterface" method="postWishlist"/>
+		<resources>
+			<resource ref="Awa_Mobileshop::wishlist"/>
+		</resources>
+	</route>
+	<route method="DELETE" url="/V1/awa-mobileshop/wishlist/:customerId/:productId">
+		<service class="Awa\Mobileshop\Api\WishlistManagementInterface" method="deleteWishlist"/>
+		<resources>
+			<resource ref="Awa_Mobileshop::wishlist"/>
+		</resources>
+	</route>
+	<route method="PUT" url="/V1/awa-mobileshop/wishlist">
+		<service class="Awa\Mobileshop\Api\WishlistManagementInterface" method="putWishlist"/>
+		<resources>
+			<resource ref="Awa_Mobileshop::wishlist"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/awa-mobileshop/reviews/:reviewId">
+		<service class="Awa\Mobileshop\Api\ReviewManagementInterface" method="get"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/awa-mobileshop/product/reviews/:productId">
+		<service class="Awa\Mobileshop\Api\ReviewManagementInterface" method="getByProduct"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/awa-mobileshop/customer/reviews/:customerId">
+		<service class="Awa\Mobileshop\Api\ReviewManagementInterface" method="getByCustomer"/>
+		<resources>
+			<resource ref="Awa_Mobileshop::reviews"/>
+		</resources>
+	</route>
+	<route method="POST" url="/V1/awa-mobileshop/product/reviews/">
+		<service class="Awa\Mobileshop\Api\ReviewManagementInterface" method="postReview"/>
+		<resources>
+			<resource ref="Awa_Mobileshop::reviews"/>
+		</resources>
+	</route>
+</routes>
